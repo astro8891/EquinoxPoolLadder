@@ -1,0 +1,18 @@
+<div class="container">
+  <table class="table" *ngIf="users">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">1</th>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+      </tr>     
+    </tbody>
+  </table>
+</div>
