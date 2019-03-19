@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { RegisterPlayerComponent } from './components/register-player/register-player.component';
 import { EnterScoreComponent } from './components/enter-score/enter-score.component';
+import { CommonService } from './services/common.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { EnterScoreComponent } from './components/enter-score/enter-score.compon
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
